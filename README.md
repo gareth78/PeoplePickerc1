@@ -202,4 +202,4 @@ ISC
 
 ---
 
-Built with Next.js 14, TypeScript, and CSS Modules
+Built with Next.js 14, TypeScript, and CSS Modules.
