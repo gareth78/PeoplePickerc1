@@ -57,9 +57,7 @@ async function fetchOktaUsers(
   }
 
   if (query && query.trim().length > 0) {
-    const escapedQuery = query.replace(/"/g, '\\"');
-    const search = `profile.displayName sw "${escapedQuery}" or profile.email sw "${escapedQuery}" or profile.title sw "${escapedQuery}" or profile.officeLocation sw "${escapedQuery}"`;
-    searchParams.append('search', search);
+    searchParams.append('q', query.trim());
   }
 
   const url = `${baseUrl}?${searchParams.toString()}`;
